@@ -34,12 +34,14 @@ const verif = (e)=>{
   }else{
       setValidPrenom(true)
   }
-
-  if(niveau == ''){
+  if(props.ok){
+    if(niveau == ''){
       setValidNiveau(false)
   }else{
       setValidNiveau(true)
   }
+  }
+  
 
   if(password.length < 8){
     setValidPassword(false)
@@ -83,6 +85,8 @@ const verif = (e)=>{
         <option value="3L">3eme Licence</option>
       </select>}
       {!validNiveau && <span className=' text-sm text-red-800 bg-red-200 p-1 rounded-sm'>selectionez votre niveau !</span>}
+      
+      
 
 
 
